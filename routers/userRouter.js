@@ -1,6 +1,8 @@
 import express from "express";
+import routes from "../routes";
+import { home } from "../controllers/userController";
 
 const userRouter = express.Router();
 
-userRouter.get("/", (req, res) => res.send("User Home"));
+userRouter.get(routes.home, home);
 export default userRouter;

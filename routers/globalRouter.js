@@ -1,6 +1,9 @@
 import express from "express";
+import { home } from "../controllers/userController";
+import routes from "../routes";
 
 const globalRouter = express.Router();
 
-globalRouter.get("/", (req, res) => res.sendStatus(200));
+globalRouter.get(routes.home, home);
+
 export default globalRouter;
